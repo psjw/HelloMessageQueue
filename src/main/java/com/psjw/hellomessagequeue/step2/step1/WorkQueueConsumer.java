@@ -8,7 +8,7 @@ public class WorkQueueConsumer {
     public void workQueueTask(String message) {
         String[] messagePart = message.split("\\|");
         String originalMessage = messagePart[0];
-        int duration = Integer.parseInt(messagePart[1]);
+        int duration = Integer.parseInt(messagePart[1].trim());
 
         System.out.println(
                 "# Received message: " + originalMessage + " (duration: " + duration + " ms)");
