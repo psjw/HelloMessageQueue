@@ -20,5 +20,10 @@ public class WorkQueueController {
     public String workQueue(@RequestParam String message, @RequestParam int duration) {
         workQueueProducer.sendWorkQueue(message, duration);
         return "[#] Work queue sent = " + message + ", (duration: " + duration + " ms)";
+        /**
+            curl -X POST "http://localhost:8080/api/workqueue?message=Task&duration=2000"
+            curl -X POST "http://localhost:8080/api/workqueue?message=Task&duration=4000"
+            curl -X POST "http://localhost:8080/api/workqueue?message=Task&duration=5000"
+         */
     }
 }
