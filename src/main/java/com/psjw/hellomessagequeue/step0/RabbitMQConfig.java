@@ -1,5 +1,6 @@
 package com.psjw.hellomessagequeue.step0;
 
+import javax.sound.midi.Receiver;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -34,5 +35,10 @@ public class RabbitMQConfig {
         container.setQueueNames(QUEUE_NAME);
         container.setMessageListener(listenerAdapter);
         return container;
+    }
+
+    @Bean
+    public MessageListenerAdapter listenerAdapter(Receiver receiver) {
+        return new MessageListenerAdapter(receiver, "receiveMessage");
     }
 }
