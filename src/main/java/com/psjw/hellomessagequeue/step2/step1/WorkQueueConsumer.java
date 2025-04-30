@@ -13,12 +13,17 @@ public class WorkQueueConsumer {
         System.out.println(
                 "# Received message: " + originalMessage + " (duration: " + duration + " ms)");
         try {
+            int seconds = duration / 1000;
+            for (int i = 0; i < seconds; i++) {
+                Thread.sleep(1000); //1초 대기
+                System.out.print(".");
+            }
             System.out.println("now...sleep time " + duration + "ms");
             Thread.sleep(duration);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
 
-        System.out.println("[X] Completed: " + originalMessage);
+        System.out.println("\n [X] Completed: " + originalMessage);
     }
 }
