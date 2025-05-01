@@ -1,4 +1,4 @@
-package com.psjw.hellomessagequeue.step2.step1;
+package com.psjw.hellomessagequeue.step2;
 
 import org.springframework.stereotype.Component;
 
