@@ -1,8 +1,8 @@
-package com.psjw.hellomessagequeue.step5;
+package com.psjw.hellomessagequeue.step6;
 
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class CustomExceptionHandler {
 
     private final LogPublisher logPublisher;
@@ -11,26 +11,26 @@ public class CustomExceptionHandler {
         this.logPublisher = logPublisher;
     }
 
-    //에러나 로그 처리
+    // 에러나 로그 처리
     public void handleException(Exception e) {
         String message = e.getMessage();
+
         String routingKey;
 
         if (e instanceof NullPointerException) {
-            routingKey = "error";
+            routingKey = "log.error";
         } else if (e instanceof IllegalArgumentException) {
-            routingKey = "warn";
+            routingKey = "log.warn";
         } else {
-            routingKey = "error";
+            routingKey = "log.error";
         }
 
-        logPublisher.publish(routingKey, "Exception 발생했음 : " + message);
+        logPublisher.publish(routingKey, "Exception이 발생했음 : " + message);
     }
 
-
-    //메시지 처리
+    // 메시지 처리
     public void handleMessage(String message) {
-        String routingKey = "info";
-        logPublisher.publish(routingKey, "Info Log : " + message);
+        String routingKey = "log.info";
+        logPublisher.publish(routingKey, "Info Log : "  + message);
     }
 }
