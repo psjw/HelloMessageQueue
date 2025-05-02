@@ -7,7 +7,7 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class RabbitMQConfig {
     protected static final String QUEUE_NAME = "notificationQueue";
     protected static final String EXCHANGE_NAME = "notificationExchange";
