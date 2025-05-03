@@ -4,7 +4,7 @@ import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
 
-@Controller
+//@Controller
 public class NewsController {
     private final NewsPublisher newsPublisher;
 

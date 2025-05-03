@@ -4,7 +4,7 @@ import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 
-@Controller
+//@Controller
 public class StompController {
     private final SimpMessagingTemplate simpMessagingTemplate;
 

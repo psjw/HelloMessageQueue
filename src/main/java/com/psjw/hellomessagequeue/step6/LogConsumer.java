@@ -3,7 +3,7 @@ package com.psjw.hellomessagequeue.step6;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class LogConsumer {
 
     @RabbitListener(queues = RabbitMQConfig.ERROR_QUEUE)

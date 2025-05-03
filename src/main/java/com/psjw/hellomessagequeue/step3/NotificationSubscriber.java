@@ -4,7 +4,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class NotificationSubscriber {
 
     public static final String CLIENT_URL = "/topic/notifications";

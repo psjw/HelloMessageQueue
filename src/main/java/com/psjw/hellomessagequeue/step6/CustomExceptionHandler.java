@@ -2,7 +2,7 @@ package com.psjw.hellomessagequeue.step6;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class CustomExceptionHandler {
 
     private final LogPublisher logPublisher;
