@@ -1,4 +1,4 @@
-package com.psjw.hellomessagequeue.step7;
+package com.psjw.hellomessagequeue.step8;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-//@RestController
+@RestController
 @RequestMapping("/api/order")
 public class OrderController {
 
@@ -19,7 +19,7 @@ public class OrderController {
 
     @GetMapping
     public ResponseEntity<String> sendOrderMessage(@RequestParam String message) {
-        orderProducer.sendShpping(message);
+        orderProducer.sendShipping(message);
         return ResponseEntity.ok("Order Completed Message sent: " + message);
     }
 }

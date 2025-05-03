@@ -12,7 +12,7 @@ import org.springframework.amqp.rabbit.connection.ConnectionFactory;
  * RabbitMQ 리스너 설정을 커스터마이징 한다.
  */
 @EnableRabbit
-@Configuration
+//@Configuration
 public class RabbitMQManualConfig {
 
     @Bean
