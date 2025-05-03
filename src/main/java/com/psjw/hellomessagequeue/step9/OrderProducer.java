@@ -1,9 +1,9 @@
-package com.psjw.hellomessagequeue.step8;
+package com.psjw.hellomessagequeue.step9;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class OrderProducer {
     private final RabbitTemplate rabbitTemplate;
 

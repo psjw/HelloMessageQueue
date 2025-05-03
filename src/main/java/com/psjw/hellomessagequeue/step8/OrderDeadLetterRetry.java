@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  * @fileName : OrderDeadLetterRetry
  * @since : 12/26/24
  */
-@Component
+//@Component
 public class OrderDeadLetterRetry {
 
     private final RabbitTemplate rabbitTemplate;

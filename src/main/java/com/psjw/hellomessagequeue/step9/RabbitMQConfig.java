@@ -1,4 +1,4 @@
-package com.psjw.hellomessagequeue.step8;
+package com.psjw.hellomessagequeue.step9;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -8,7 +8,7 @@ import org.springframework.amqp.core.TopicExchange;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-//@Configuration
+@Configuration
 public class RabbitMQConfig {
 
     // 큐, 교환기, 라우팅 키 이름 정의
@@ -48,7 +48,7 @@ public class RabbitMQConfig {
     // 원래 큐와 Exchange 바인딩
     @Bean
     public Binding orderQueueBinding() {
-        return BindingBuilder.bind(orderQueue()).to(orderExchange()).with("order.completed");
+        return BindingBuilder.bind(orderQueue()).to(orderExchange()).with("order.completed.*");
     }
 
     // Dead Letter Queue와 Dead Letter Exchange 바인딩

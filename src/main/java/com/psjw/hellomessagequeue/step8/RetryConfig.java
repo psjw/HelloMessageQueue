@@ -15,7 +15,7 @@ import org.springframework.retry.support.RetryTemplate;
  * RabbitMQ 리스너 설정을 커스터마이징 한다.
  */
 @EnableRabbit
-@Configuration
+//@Configuration
 public class RetryConfig {
 
     @Bean
