@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class MessageConsumer {
 
     private final StockRepository stockRepository;
@@ -20,7 +20,7 @@ public class MessageConsumer {
         try {
             stockEntity.setProcessed(true);
             stockEntity.setUpdatedAt(LocalDateTime.now());
-            stockRepository.save(stockEntity);
+//            stockRepository.save(stockEntity);
             System.out.println("# StockEntity 저장 완료");
         } catch (Exception e) {
             System.out.println("# Entity 수정 에러 " + e.getMessage());

@@ -17,6 +17,7 @@ spring:
     port: 5672
     username: guest1
     password: test1234
+    publisher-confirm-type: correlated # Enable Publisher Confirms 추가
     listener:
       simple:
         retry:

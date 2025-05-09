@@ -1,4 +1,4 @@
-package com.psjw.hellomessagequeue.step10;
+package com.psjw.hellomessagequeue.step11;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-//@RestController
-//@RequestMapping("/api/message")
+@RestController
+@RequestMapping("/api/message")
 public class TransactionController {
 
     private final MessageProducer messageProducer;
@@ -20,7 +20,7 @@ public class TransactionController {
 
     @PostMapping()
     public ResponseEntity<String> sendMessage(@RequestBody StockEntity stockEntity,
-            @RequestParam(required = false, defaultValue = "success") String testCase) {
+            @RequestParam(required = false, defaultValue = "success") boolean testCase) {
         // do something
         System.out.println("send message = " + stockEntity);
 

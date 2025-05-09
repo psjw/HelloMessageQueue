@@ -1,4 +1,4 @@
-package com.psjw.hellomessagequeue.step10;
+package com.psjw.hellomessagequeue.step11;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,8 +7,8 @@ import jakarta.persistence.Id;
 import java.time.LocalDateTime;
 import lombok.ToString;
 
-//@Entity
-//@ToString
+@Entity
+@ToString
 public class StockEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
